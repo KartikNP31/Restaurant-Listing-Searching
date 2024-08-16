@@ -1,5 +1,6 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
+const logo  = require('./Logo.png');
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -20,11 +21,11 @@ const Navbar = () => {
             <div className="flex flex-shrink-0 items-center">
               <img
                 alt="Let’s Find RestOrnat"
-                src="https://www.canva.com/design/DAGOBhj_o7A/AuJZBK8En49vsH-dHxVK1g/view?utm_content=DAGOBhj_o7A&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                className="h-12 sm:w-auto lg:w-[3vw]"
+                src={logo}
+                className="h-[9vh] w-auto"
               />
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block my-auto">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
