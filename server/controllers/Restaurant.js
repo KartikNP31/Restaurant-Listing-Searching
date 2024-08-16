@@ -30,6 +30,7 @@ class RestaurantServices {
         filter.AverageCostForTwo = { $gte: Number(avgMinCostForTwo), $lte: Number(avgMaxCostForTwo) };
       }
       const restaurants = await Restaurant.find(filter)
+        .sort({ AggregateRating: -1 })
         .skip((page - 1) * limit)
         .limit(limit)
         .exec();
