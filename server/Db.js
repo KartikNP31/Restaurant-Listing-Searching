@@ -8,10 +8,9 @@ require('dotenv').config();
 
 
 mongoose.connect(process.env.mongoURI
-  // , {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true
-  // }
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 30000,
 ).then(() => {
   console.log('Connected to MongoDB');
 }).catch(err => {
