@@ -43,6 +43,6 @@ Please follow the below steps to run the application.
 - Application will open automatically in browser. If won't the use below link : 
 >- http://localhost:3000/
 - Hosted application link
->- https://restaurant-listing-searching-owydciyjx.vercel.app
+>- [https://restaurant-listing-searching-owydciyjx.vercel.app](https://restaurant-listing-s-git-b67360-kartik-patels-projects-623afc4b.vercel.app/)
 
 
