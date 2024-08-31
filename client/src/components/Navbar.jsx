@@ -1,5 +1,6 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
+import { Link } from "react-router-dom";
 const logo  = require('./Logo.png');
 
 const navigation = [
@@ -24,13 +25,14 @@ const Navbar = () => {
                 src={logo}
                 className="h-[9vh] w-auto"
               />
+              
             </div>
             <div className="hidden sm:ml-6 sm:block my-auto">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       item.current
@@ -40,7 +42,9 @@ const Navbar = () => {
                     )}
                   >
                     <strong>{item.name}</strong>
-                  </a>
+                    
+                  </Link>
+                  
                 ))}
               </div>
             </div>
